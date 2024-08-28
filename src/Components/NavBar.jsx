@@ -31,7 +31,7 @@ const NavBar = () => {
   return (
     <>
 
-      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0">
+      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 z-50 bg-white">
 
         {/*container too divide div into left and right part   */}
         <div className="flex justify-between items-center h-16">
@@ -66,7 +66,7 @@ const NavBar = () => {
 
         {!menu && (
         <div >
-        <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl" >
+        <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl bg-red-500" >
         {navItems.map(({id,name})=>{
                       return(
                         <li key={id} className="hover:scale-105 duration-200 cursor-pointer">{name}</li>
