@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+.hero-container {
+  display: flex;
+  width: 100%;
+  /* Calculating height: 100vh - (navbar + footer) */
+  height: calc(100vh - 6.5rem);  /* 3.5rem (navbar) + 3rem (footer) = 6.5rem */
+  min-height: 400px; /* Add a minimum height to prevent collapse */
+  background-color: #1E1E22;
+}
+
+.hero-left {
+  width: 50%;
+  /* background-color: green; */
+  min-height: 100%; /* Ensure it takes full height of parent */
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5rem;  /* Changed from 10% to 1.5rem */
+}
+
+.hero-right {
+  width: 50%;
+  /* background-color: red; */
+  min-height: 100%; /* Ensure it takes full height of parent */
+}
+
+.hero-title {
+  color: #FFFFFF;
+  font-size: 3.6rem; /* 64px converted to rem */
+  font-weight: 400;
+  margin-left: 0;  /* Ensure no extra margin */
+  margin-bottom: 2rem; /* Added gap */
+}
+
+.hero-subtitle {
+  color: #A0A0A6;
+  font-size: 1.2rem; /* 24px converted to rem */
+  font-weight: 400;
+  margin-left: 0;  /* Ensure no extra margin */
+  margin-top: 1rem; /* Added gap */
+}
+
+.hero-description {
+  color: #E0E0E4;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-left: 0;
+  margin-top: 1rem; 
+}
+
+/* Add a wrapper div for the button to center it */
+.button-wrapper {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+}
+
+.hero-button {
+  background-color: #2B5EFF;
+  color: #FFFFFF;
+  font-size: 1.125rem; /* 18px converted to rem */
+  font-weight: 400;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.hero-button:hover {
+  background-color: #1f45cc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .hero-description {
+    font-size: 1.5rem;
+  }
+}
+
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.profile-image {
+  width: 31.25rem;  /* 500px converted to rem */
+  height: 31.25rem; /* 500px converted to rem */
+  border-radius: 50%;
+  object-fit: cover;
+} 
