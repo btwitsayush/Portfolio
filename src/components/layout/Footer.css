@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  background-color: #1E1E22;
+  padding: 0 5rem;
+  font-family: 'Inter', sans-serif;
+  border-top: 0.1875rem solid rgba(255, 255, 255, 0.8);
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 50%;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.footer-icon {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #0066FF;
+}
+
+.footer-text {
+  color: #FFFFFF;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Enhanced responsive adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 0 1.5rem;
+    flex-direction: column;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .footer-left, .footer-right {
+    width: 100%;
+    justify-content: center;
+    padding: 0.5rem 0;
+  }
+
+  .footer-left {
+    gap: 1.5rem;
+  }
+  
+  .footer-text {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .footer-icon {
+    font-size: 1.25rem;
+  }
+}
+
+/* Additional breakpoint for very small screens */
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0 1rem;
+  }
+
+  .footer-left {
+    gap: 1rem;
+  }
+
+  .footer-text {
+    font-size: 0.675rem;
+  }
+
+  .footer-icon {
+    font-size: 1.125rem;
+  }
+} 
