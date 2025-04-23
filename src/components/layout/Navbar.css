@@ -1,0 +1,60 @@
+/* Import Inter font if not already imported in index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+.navbar {
+  font-family: 'Inter', sans-serif;
+  height: 3.5rem;
+}
+
+.navbar-brand {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 400; /* Regular */
+  font-family: 'Inter', sans-serif;
+  padding-left: 5rem;
+}
+
+.nav-link {
+  color: #FFFFFF !important;
+  font-size: 1rem; /* 16px */
+  font-weight: 400; /* Regular */
+  font-family: 'Inter', sans-serif;
+}
+
+/* Active link styling */
+.nav-link.active {
+  color: #0066FF !important;
+}
+
+/* Adjust spacing between nav items */
+.navbar-nav {
+  gap: 1.5rem;
+}
+
+/* Smaller toggler button with white color */
+.navbar-toggler {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+  width: 1.25em;
+  height: 1.25em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding: 1rem 0;
+    background-color: #1E1E22;
+    position: absolute;
+    top: 3.5rem; /* Updated to match new navbar height */
+    right: 0;
+    width: 100%;
+  }
+  
+  .navbar-nav {
+    gap: 0.25rem;
+    padding: 1rem;
+  }
+} 
