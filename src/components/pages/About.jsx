@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.css';
+import '../../styles/About.css';
 import profileImage from '../../assets/images/profile.jpeg';
 import { FaWhatsapp } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';

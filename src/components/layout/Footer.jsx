@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css';
+import "../../styles/Footer.css";
 // More specific imports
 import { FaGithub, FaLinkedin, FaCode, FaBriefcase } from 'react-icons/fa';
 
