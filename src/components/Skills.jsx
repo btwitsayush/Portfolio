@@ -1,5 +1,5 @@
 import React from 'react';
-import './Skills.css';
+import '../styles/Skills.css';
 import { SiTensorflow, SiPython, SiFastapi } from 'react-icons/si';
 import { BiData } from 'react-icons/bi';
 import { BsCodeSlash } from 'react-icons/bs';

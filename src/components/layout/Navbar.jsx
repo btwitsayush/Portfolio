@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import './Navbar.css'
+import '../../styles/Navbar.css';
 
 const Navbar = () => {
   const location = useLocation(); // This hook tells us which page is active
@@ -52,10 +52,10 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link 
-                  className={`nav-link ${location.pathname === '/skills' ? 'active' : ''}`}
-                  to="/skills"
+                  className={`nav-link ${location.pathname === '/my-journey' ? 'active' : ''}`}
+                  to="/my-journey"
                 >
-                  Skills
+                  My Journey
                 </Link>
               </li>
               <li className="nav-item">

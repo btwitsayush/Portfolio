@@ -1,0 +1,176 @@
+.journey-card {
+  position: relative;
+  width: calc(50% - 2rem);
+  margin-bottom: 2rem;
+  background-color: #1C1C20;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 15px rgba(0, 122, 255, 0.1),
+              0 0 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 122, 255, 0.1);
+}
+
+/* Alternate cards left and right */
+.journey-card:nth-child(odd) {
+  float: left;
+  clear: both;
+}
+
+.journey-card:nth-child(even) {
+  float: right;
+  clear: both;
+}
+
+/* Adjust circle position and size */
+.journey-card::before {
+  content: '';
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #007AFF;
+  border-radius: 50%;
+  top: 1.875rem;
+  z-index: 2;
+}
+
+/* Position circles for left and right cards */
+.journey-card:nth-child(odd)::before {
+  right: -2.425rem;
+}
+
+.journey-card:nth-child(even)::before {
+  left: -2.425rem;
+}
+
+/* Adjust connecting lines to touch the circles */
+.journey-card::after {
+  content: '';
+  position: absolute;
+  top: 2.175rem;
+  height: 0.125rem;
+  background-color: #007AFF;
+  z-index: 1;
+}
+
+.journey-card:nth-child(odd)::after {
+  right: -1.625rem;
+  width: 1.25rem;
+}
+
+.journey-card:nth-child(even)::after {
+  left: -1.625rem;
+  width: 1.25rem;
+}
+
+.journey-icon {
+  color: #007AFF;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.journey-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.journey-subtitle {
+  color: #007AFF;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.journey-date {
+  color: #D1D5DB;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.journey-tech,
+.journey-achievements,
+.journey-score,
+.journey-board {
+  margin-top: 0.75rem;
+}
+
+.journey-tech p,
+.journey-achievements p,
+.journey-score p,
+.journey-board p {
+  color: #D1D5DB;
+  margin: 0;
+  text-align: left;
+  white-space: pre-line;
+}
+
+.journey-tech p::before,
+.journey-achievements p::before,
+.journey-score p::before,
+.journey-board p::before {
+  content: attr(data-label);
+  position: absolute;
+  left: 0;
+  color: #FFFFFF;
+  font-weight: 700;
+  width: 7rem;
+}
+
+.journey-details {
+  margin-top: 0.75rem;
+  color: #D1D5DB;
+  line-height: 1.5;
+  padding-left: 0;
+  text-indent: 0;
+}
+
+@media (max-width: 768px) {
+  .journey-card {
+    width: calc(100% - 4rem);
+    float: right;
+    margin-left: 3.75rem;
+    position: relative;
+  }
+
+  .journey-card:nth-child(odd),
+  .journey-card:nth-child(even) {
+    float: right;
+    clear: both;
+  }
+
+  .journey-card::before {
+    left: -2.25rem !important;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .journey-card::after {
+    left: -1.625rem !important;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.25rem;
+    height: 0.125rem;
+  }
+
+  .journey-tech span,
+  .journey-achievements span,
+  .journey-score span,
+  .journey-board span {
+    margin-left: 7.5rem;
+    text-indent: 0;
+  }
+
+  .journey-card::before {
+    content: '';
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #007AFF;
+    border-radius: 50%;
+    left: -2.25rem !important;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+} 
