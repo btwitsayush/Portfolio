@@ -9,6 +9,14 @@
   background-color: #1E1E22;
 }
 
+.hero-content-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* Default desktop layout - left text, right image */
+  flex-direction: row;
+}
+
 .hero-left {
   width: 50%;
   /* background-color: green; */
@@ -22,8 +30,10 @@
 
 .hero-right {
   width: 50%;
-  /* background-color: red; */
-  min-height: 100%; /* Ensure it takes full height of parent */
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-title {
@@ -74,8 +84,46 @@
   background-color: #1f45cc;
 }
 
-/* Responsive adjustments */
+/* Enhanced responsive adjustments */
 @media (max-width: 768px) {
+  .hero-container {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .hero-content-wrapper {
+    flex-direction: column; /* Stack vertically on mobile */
+  }
+
+  .hero-left, .hero-right {
+    width: 100%;
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .hero-right {
+    order: -1; /* Only move image to top on mobile */
+  }
+
+  .hero-left {
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .profile-image-container {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .profile-image {
+    width: 18.75rem;  /* Fixed width */
+    height: 18.75rem; /* Same as width to make square */
+    max-width: 90vw;  /* Prevent overflow */
+    max-height: 90vw; /* Keep square aspect */
+    object-fit: cover;
+  }
+
   .hero-title {
     font-size: 2.5rem;
   }
@@ -87,18 +135,55 @@
   .hero-description {
     font-size: 1.5rem;
   }
+
+  .button-wrapper {
+    justify-content: center;
+  }
+}
+
+/* Additional breakpoint for very small screens */
+@media (max-width: 480px) {
+  .hero-right {
+    padding: 0.5rem;
+  }
+
+  .profile-image-container {
+    padding: 0.5rem;
+  }
+
+  .profile-image {
+    width: 15rem;   /* Fixed width */
+    height: 15rem;  /* Same as width to make square */
+    max-width: 85vw;
+    max-height: 85vw;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+  }
 }
 
 .profile-image-container {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  padding: 2rem;
 }
 
 .profile-image {
-  width: 31.25rem;  /* 500px converted to rem */
-  height: 31.25rem; /* 500px converted to rem */
-  border-radius: 50%;
+  width: 31.25rem;
+  height: 31.25rem;
+  border-radius: 0.625rem;
   object-fit: cover;
+  max-width: 100%;
 } 
