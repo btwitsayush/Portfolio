@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 .hero-container {
   display: flex;
   width: 100%;
   /* Calculating height: 100vh - (navbar + footer) */
   height: calc(100vh - 6.5rem);  /* 3.5rem (navbar) + 3rem (footer) = 6.5rem */
-  min-height: 400px; /* Add a minimum height to prevent collapse */
+  min-height: 400px; 
   background-color: #1E1E22;
 }
 
@@ -19,9 +20,8 @@
 
 .hero-left {
   width: 50%;
-  /* background-color: green; */
-  min-height: 100%; /* Ensure it takes full height of parent */
-  font-family: 'Inter', sans-serif;
+  min-height: 100%; 
+  font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,26 +38,18 @@
 
 .hero-title {
   color: #FFFFFF;
-  font-size: 3.6rem; /* 64px converted to rem */
+  font-size: 2.6rem; /* 64px converted to rem */
   font-weight: 400;
   margin-left: 0;  /* Ensure no extra margin */
-  margin-bottom: 2rem; /* Added gap */
-}
-
-.hero-subtitle {
-  color: #A0A0A6;
-  font-size: 1.2rem; /* 24px converted to rem */
-  font-weight: 400;
-  margin-left: 0;  /* Ensure no extra margin */
-  margin-top: 1rem; /* Added gap */
+  font-family: 'Poppins', sans-serif;
 }
 
 .hero-description {
   color: #E0E0E4;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 400;
   margin-left: 0;
-  margin-top: 1rem; 
+  margin-top: 0.5rem; 
 }
 
 /* Add a wrapper div for the button to center it */
@@ -84,93 +76,6 @@
   background-color: #1f45cc;
 }
 
-/* Enhanced responsive adjustments */
-@media (max-width: 768px) {
-  .hero-container {
-    height: auto;
-    padding: 2rem 0;
-  }
-
-  .hero-content-wrapper {
-    flex-direction: column; /* Stack vertically on mobile */
-  }
-
-  .hero-left, .hero-right {
-    width: 100%;
-    min-height: auto;
-    padding: 1rem;
-  }
-
-  .hero-right {
-    order: -1; /* Only move image to top on mobile */
-  }
-
-  .hero-left {
-    padding: 2rem 1.5rem;
-    text-align: center;
-  }
-
-  .profile-image-container {
-    width: 100%;
-    height: auto;
-    padding: 1rem;
-  }
-
-  .profile-image {
-    width: 18.75rem;  /* Fixed width */
-    height: 18.75rem; /* Same as width to make square */
-    max-width: 90vw;  /* Prevent overflow */
-    max-height: 90vw; /* Keep square aspect */
-    object-fit: cover;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.25rem;
-  }
-  
-  .hero-description {
-    font-size: 1.5rem;
-  }
-
-  .button-wrapper {
-    justify-content: center;
-  }
-}
-
-/* Additional breakpoint for very small screens */
-@media (max-width: 480px) {
-  .hero-right {
-    padding: 0.5rem;
-  }
-
-  .profile-image-container {
-    padding: 0.5rem;
-  }
-
-  .profile-image {
-    width: 15rem;   /* Fixed width */
-    height: 15rem;  /* Same as width to make square */
-    max-width: 85vw;
-    max-height: 85vw;
-  }
-
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-
-  .hero-description {
-    font-size: 1.25rem;
-  }
-}
-
 .profile-image-container {
   width: 100%;
   height: 100%;
@@ -178,6 +83,7 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  /* background-color: #ffffff; */
 }
 
 .profile-image {
@@ -186,4 +92,93 @@
   border-radius: 0.625rem;
   object-fit: cover;
   max-width: 100%;
-} 
+}
+
+/* Enhanced responsive adjustments */
+@media (max-width: 768px) {
+    .hero-container {
+      height: auto;
+      padding: 2rem 0;
+    }
+  
+    .hero-content-wrapper {
+      flex-direction: column; /* Stack vertically on mobile */
+    }
+  
+    .hero-left, .hero-right {
+      width: 100%;
+      min-height: auto;
+      padding: 1rem;
+    }
+  
+    .hero-right {
+      order: -1; /* Only move image to top on mobile */
+    }
+  
+    .hero-left {
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+  
+    .profile-image-container {
+      width: 100%;
+      height: auto;
+      padding: 1rem;
+    }
+  
+    .profile-image {
+      width: 18.75rem;  /* Fixed width */
+      height: 18.75rem; /* Same as width to make square */
+      max-width: 90vw;  /* Prevent overflow */
+      max-height: 90vw; /* Keep square aspect */
+      object-fit: cover;
+
+    }
+  
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.25rem;
+    }
+    
+    .hero-description {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+  
+    .button-wrapper {
+      justify-content: center;
+    }
+  }
+  
+  /* Additional breakpoint for very small screens */
+  @media (max-width: 480px) {
+    .hero-right {
+      padding: 0.5rem;
+    }
+  
+    .profile-image-container {
+      padding: 0.5rem;
+    }
+  
+    .profile-image {
+      width: 15rem;   /* Fixed width */
+      height: 15rem;  /* Same as width to make square */
+      max-width: 85vw;
+      max-height: 85vw;
+    }
+  
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  
+    .hero-description {
+      font-size: 1.25rem;
+    }
+  }
