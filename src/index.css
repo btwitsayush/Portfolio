@@ -12,7 +12,7 @@ html, body {
   padding: 0;
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
-  background: #c12727;
+  /* background: #c12727; */
   font-size: 16px;
   font-weight: 400;
 }
