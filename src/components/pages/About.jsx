@@ -4,6 +4,8 @@ import profileImage from '../../assets/images/profile.jpeg';
 import { FaWhatsapp } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import Skills from '../Skills';
+import { motion } from 'framer-motion';
+import { containerVariants } from '../../animations/animations';
 
 const About = () => {
   const handleEmailClick = () => {
@@ -14,11 +16,25 @@ const About = () => {
 
   return (
     <>
-      <div className="about-container">
-        <div className="about-left">
+      <motion.div 
+        className="about-container"
+        variants={containerVariants}
+        initial="initial"
+        animate="animate"
+      >
+        <motion.div 
+          className="about-left"
+          initial={{ x: -200, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.9 }}
+        >
           <div className="about-card">
             <div className="profile-section">
-              <img src={profileImage} alt="Ayush Srivastava" className="about-profile-image" />
+              <img 
+                src={profileImage} 
+                alt="Ayush Srivastava" 
+                className="about-profile-image"
+              />
             </div>
             <h2 className="about-name">Ayush Srivastava</h2>
             <p className="about-title">Software Development Engineer Intern</p>
@@ -37,9 +53,21 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="about-right">
-          <h1 className="about-heading">About Me</h1>
+        </motion.div>
+        <motion.div 
+          className="about-right"
+          initial={{ x: 200, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.9 }}
+        >
+          <motion.h1 
+            className="about-heading"
+            initial={{ "--line-width": "0%" }}
+            animate={{ "--line-width": "22%" }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            About Me
+          </motion.h1>
           <div className="about-description">
             <p>
               I'm a passionate Machine Learning Engineer with a strong foundation in computer science and a keen interest in artificial intelligence. My journey in tech has been driven by curiosity and the desire to create impactful solutions.
@@ -53,10 +81,9 @@ const About = () => {
             <p>
               Currently focused on developing scalable ML solutions and exploring the latest advancements in AI technology. I believe in continuous learning and staying updated with cutting-edge developments in the field.
             </p>
-
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       <Skills />
     </>
   );

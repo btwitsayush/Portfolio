@@ -73,13 +73,22 @@
 .social-icon {
   font-size: 1.5rem;
   color: #007AFF;
-  transition: color 0.3s ease;
+  transition: all 0.2s ease;
 }
 
-.social-icon:hover {
-  color: #D1D5DB;
+.about-social-icons a:hover .social-icon,
+.about-social-icons div[role="button"]:hover .social-icon {
+  color: #ffffff;
+  transform: scale(1.25);
 }
 
+.about-social-icons a,
+.about-social-icons div[role="button"] {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .about-right {
   width: 50%;
@@ -93,8 +102,8 @@
 
 .about-heading {
   font-family: 'Inter', sans-serif;
-  font-size: 3rem; /* 48px */
-  font-weight: 700; /* bold */
+  font-size: 3rem;
+  font-weight: 700;
   color: #FFFFFF;
   margin-bottom: 2rem;
   position: relative;
@@ -106,10 +115,11 @@
   position: absolute;
   left: 0;
   bottom: -0.5rem;
-  width: 20%; 
+  width: var(--line-width, 22%);
   height: 0.25rem;
   background-color: #007AFF;
   border-radius: 0.125rem;
+  transition: width 1s ease;
 }
 
 .about-description {
