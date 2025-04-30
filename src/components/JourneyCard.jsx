@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/JourneyCard.css';
+import { motion } from 'framer-motion';
 
 const JourneyCard = ({ 
   icon: Icon, 
@@ -11,9 +12,16 @@ const JourneyCard = ({
   technologies, 
   board, 
   percentage, 
-  cgpa 
+  cgpa,
+  index 
 }) => (
-  <div className="journey-card">
+  <motion.div 
+    className="journey-card"
+    initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: false, amount: "some" }}
+    transition={{ duration: 0.5, ease: "easeOut" }}
+  >
     <Icon className="journey-icon" />
     <div className="journey-content">
       <h3 className="journey-title">{title}</h3>
@@ -51,7 +59,7 @@ const JourneyCard = ({
         </div>
       )}
     </div>
-  </div>
+  </motion.div>
 );
 
 export default JourneyCard; 

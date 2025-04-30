@@ -3,13 +3,34 @@ import '../../styles/Journey.css';
 import { FaBuilding, FaSchool } from 'react-icons/fa';
 import { IoSchool } from 'react-icons/io5';
 import JourneyCard from '../JourneyCard';
+import { motion } from 'framer-motion';
 
 const Journey = () => {
   return (
-    <div className="journey-container">
-      <h1 className="journey-heading">
-        My <span className="highlight">Professional</span> Journey
-      </h1>
+    <motion.div 
+      className="journey-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.h1 
+        className="journey-heading"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: "some" }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        My <motion.span 
+          className="highlight"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: "some" }}
+          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+        >
+          Professional
+        </motion.span> Journey
+      </motion.h1>
+
       <div className="journey-timeline">
         <JourneyCard
           icon={FaBuilding}
@@ -22,6 +43,7 @@ const Journey = () => {
             "Handled the backend development, trained CNN model for custom dataset, and managed data collection and preparation."
           ]}
           achievements="Received the SMILe Ratna Award for my contribution"
+          index={0}
         />
         <JourneyCard
           icon={IoSchool}
@@ -30,6 +52,7 @@ const Journey = () => {
           date="August 2021 – July 2025"
           cgpa="7.75"
           achievements="Dean's List"
+          index={1}
         />
         <JourneyCard
           icon={FaSchool}
@@ -38,6 +61,7 @@ const Journey = () => {
           date="2020"
           board="CBSE"
           percentage="78%"
+          index={2}
         />
         <JourneyCard
           icon={FaSchool}
@@ -46,9 +70,10 @@ const Journey = () => {
           date="2018"
           board="CBSE"
           percentage="69%"
+          index={3}
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
