@@ -40,10 +40,11 @@
 }
 
 .about-profile-image {
-  width: 21.875rem; /* 350px - adjusted size */
-  height: 21.875rem; /* 350px - keeping it square */
-  border-radius: 1rem;
+  width: 21.875rem; /* 350px */
+  height: 21.875rem; /* 350px */
+  border-radius: 0.5rem;
   object-fit: cover;
+  object-position: top center; 
 }
 
 .about-name {

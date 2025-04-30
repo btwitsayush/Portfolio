@@ -45,21 +45,6 @@ export const containerVariants = {
     }
 };
 
-// Blur Text Animation
-export const blurTextVariants = {
-    hidden: {
-        filter: "blur(5px)",
-        opacity: 0
-    },
-    visible: {
-        filter: "blur(0px)",
-        opacity: 1,
-        transition: {
-            duration: 1.2,
-            ease: "easeInOut"
-        }
-    }
-};
 
 // Animated Text Variants
 export const animatedTextVariants = {
@@ -75,7 +60,7 @@ export const animatedTextVariants = {
     transition: {
       duration: 0.8,
       ease: "easeOut",
-      staggerChildren: 0.15,
+      staggerChildren: 0.08,
     }
   }
 };
@@ -123,6 +108,47 @@ export const typingCharacterVariants = {
       stiffness: 100,
     },
   },
+};
+
+
+
+
+// Project Card Animations
+
+
+
+
+
+// Project Header Animations
+export const headerVariants = {
+  initial: { y: -20, opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  viewport: { once: true },
+  transition: { duration: 0.5 }
+};
+
+// Project Filter Button Animations
+export const filterButtonVariants = {
+  initial: { opacity: 0, y: -20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.3 },
+  whileHover: { scale: 1.05 },
+  whileTap: { scale: 0.95 }
+};
+
+// Project Search Animations
+export const searchVariants = {
+  initial: { opacity: 0, x: 20 },
+  whileInView: { opacity: 1, x: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.5 }
+};
+
+// Project Button Animations
+export const buttonVariants = {
+  whileHover: { scale: 1.05 },
+  whileTap: { scale: 0.95 }
 };
 
 // You can add more animation variants here as needed 

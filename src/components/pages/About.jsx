@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../styles/About.css';
-import profileImage from '../../assets/images/profile.jpeg';
+import aboutImage from '../../assets/images/about.jpeg';
 import { FaWhatsapp } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import Skills from '../Skills';
@@ -31,7 +31,7 @@ const About = () => {
           <div className="about-card">
             <div className="profile-section">
               <img 
-                src={profileImage} 
+                src={aboutImage} 
                 alt="Ayush Srivastava" 
                 className="about-profile-image"
               />
@@ -69,18 +69,12 @@ const About = () => {
             About Me
           </motion.h1>
           <div className="about-description">
-            <p>
-              I'm a passionate Machine Learning Engineer with a strong foundation in computer science and a keen interest in artificial intelligence. My journey in tech has been driven by curiosity and the desire to create impactful solutions.
-            </p>
-            <p>
-              Currently focused on developing scalable ML solutions and exploring the latest advancements in AI technology. I believe in continuous learning and staying updated with cutting-edge developments in the field.
-            </p>
-            <p>
-              Currently focused on developing scalable ML solutions and exploring the latest advancements in AI technology. I believe in continuous learning and staying updated with cutting-edge developments in the field.
-            </p>
-            <p>
-              Currently focused on developing scalable ML solutions and exploring the latest advancements in AI technology. I believe in continuous learning and staying updated with cutting-edge developments in the field.
-            </p>
+            <p>Hi, I’m Ayush Srivastava. I’m really passionate about machine learning and how we can use it to solve real-life problems. I started my journey in tech because I was curious about how things work behind the scenes, and that curiosity slowly turned into a strong interest in artificial intelligence.</p>
+            <p>I have a good understanding of computer science, and over time, I’ve been learning how to build ML models that are useful and can be scaled for real applications. Right now, I’m focused on improving my skills by working on AI projects and keeping up with the latest trends and tools in the field.</p>
+            <p>For me, learning never stops. I enjoy exploring new ideas and using what I learn to build smart and simple solutions that can actually make a difference.
+
+</p>
+  
           </div>
         </motion.div>
       </motion.div>

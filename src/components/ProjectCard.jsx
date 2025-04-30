@@ -2,9 +2,18 @@ import React, { useState } from 'react';
 import '../styles/ProjectCard.css';
 import { FaGithub, FaSearch } from 'react-icons/fa';
 import { BiLinkExternal } from 'react-icons/bi';
+import { motion, AnimatePresence } from 'framer-motion';
 import BookStore from '../assets/images/BookStore.png';
 import FlavorsOfAwadh from '../assets/images/Flavour-Of -Awadh.png';
 import PricePrediction from '../assets/images/price-prediction.png';
+import { 
+  skillCardVariants, 
+  containerVariants,
+  headerVariants,
+  filterButtonVariants,
+  searchVariants,
+  buttonVariants
+} from '../animations/animations';
 
 const categories = ['All', 'Frontend', 'Backend', 'Machine Learning', 'Computer Vision'];
 
@@ -65,6 +74,63 @@ const projects = [
 
 ];
 
+const ProjectCard = ({ project }) => (
+  <motion.div 
+    className="projectcard-card"
+    variants={skillCardVariants}
+    initial="offscreen"
+    whileInView="onscreen"
+    viewport={{ 
+      once: false,
+      amount: "some",
+    }}
+    whileHover={{ scale: 1.05 }}
+  >
+    <div className="projectcard-image">
+      <img src={project.image} alt={project.title} />
+    </div>
+    <div className="projectcard-content">
+      <h2 className="projectcard-title">{project.title}</h2>
+      <p className="projectcard-desc">{project.description}</p>
+      
+      <div className="projectcard-tech">
+        {project.technologies.map((tech, techIndex) => (
+          <span key={techIndex} className="projectcard-tag">
+            {tech}
+          </span>
+        ))}
+      </div>
+
+      <div className="projectcard-actions">
+        <motion.a 
+          href={project.githubLink} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="projectcard-btn"
+          variants={buttonVariants}
+          whileHover="whileHover"
+          whileTap="whileTap"
+        >
+          <FaGithub /> View Code
+        </motion.a>
+        {project.hasLiveDemo && (
+          <motion.a 
+            href={project.liveDemo} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="projectcard-btn projectcard-demo"
+            variants={buttonVariants}
+            whileHover="whileHover"
+            whileTap="whileTap"
+          >
+            <BiLinkExternal /> Live Demo
+          </motion.a>
+        )}
+      </div>
+    </div>
+  </motion.div>
+);
+
 const ProjectsSection = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -78,19 +144,27 @@ const ProjectsSection = () => {
 
   return (
     <div className="projectcard-section">
-      <div className="projectcard-header">
+      <motion.div 
+        className="projectcard-header"
+        {...headerVariants}
+      >
         <div className="projectcard-left">
-          {categories.map(category => (
-            <button
+          {categories.map((category, index) => (
+            <motion.button
               key={category}
               className={`projectcard-filter ${activeCategory === category ? 'projectcard-active' : ''}`}
               onClick={() => setActiveCategory(category)}
+              {...filterButtonVariants}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
             >
               {category}
-            </button>
+            </motion.button>
           ))}
         </div>
-        <div className="projectcard-right">
+        <motion.div 
+          className="projectcard-right"
+          {...searchVariants}
+        >
           <input
             type="text"
             placeholder="Search projects..."
@@ -99,39 +173,33 @@ const ProjectsSection = () => {
             className="projectcard-search"
           />
           <FaSearch className="projectcard-search-icon" />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <div className="projectcard-grid">
-        {filteredProjects.map((project, index) => (
-          <div key={index} className="projectcard-card">
-            <div className="projectcard-image">
-              <img src={project.image} alt={project.title} />
-            </div>
-            <div className="projectcard-content">
-              <h2 className="projectcard-title">{project.title}</h2>
-              <p className="projectcard-desc">{project.description}</p>
-              
-              <div className="projectcard-tech">
-                {project.technologies.map((tech, index) => (
-                  <span key={index} className="projectcard-tag">{tech}</span>
-                ))}
-              </div>
-
-              <div className="projectcard-actions">
-                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="projectcard-btn">
-                  <FaGithub /> View Code
-                </a>
-                {project.hasLiveDemo && (
-                  <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="projectcard-btn projectcard-demo">
-                    <BiLinkExternal /> Live Demo
-                  </a>
-                )}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+      <motion.div 
+        className="projectcard-grid"
+        variants={containerVariants}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ 
+          once: false,
+          amount: "some",
+        }}
+      >
+        <AnimatePresence mode="popLayout">
+          {filteredProjects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.5 }}
+            >
+              <ProjectCard project={project} />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
     </div>
   );
 };
