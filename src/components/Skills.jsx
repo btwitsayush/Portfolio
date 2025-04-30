@@ -35,7 +35,11 @@ const SkillCard = ({ icon: Icon, name }) => (
     <motion.div
       variants={skillIconVariants}
       initial="initial"
-      animate="animate"
+      whileInView="whileInView"
+      viewport={{ 
+        once: false,
+        amount: "some" 
+      }}
     >
       <Icon className="skill-icon" />
     </motion.div>
@@ -53,7 +57,7 @@ const Skills = () => {
     { icon: SiPytorch, name: 'PyTorch' },
     { icon: SiFastapi, name: 'FastAPI' },
     { icon: SiHtml5, name: 'HTML5' },
-    { icon: SiCss3, name: 'CSS3' },
+    { icon: SiCss3, name: 'CSS' },
     { icon: SiJavascript, name: 'JavaScript' },
     { icon: SiReact, name: 'React' },
     { icon: SiExpress, name: 'Express.js' },

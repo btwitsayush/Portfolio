@@ -22,13 +22,17 @@ export const skillIconVariants = {
     initial: { 
         rotate: 0 
     },
-    animate: { 
+    whileInView: { 
         rotate: 360,
         transition: {
             duration: 2,
             ease: "linear",
-            repeat: Infinity
+            repeat: 0
         }
+    },
+    viewport: { 
+        once: false,
+        amount: "some" 
     }
 };
 

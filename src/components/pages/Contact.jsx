@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import '../../styles/Contact.css';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -80,12 +81,26 @@ const Contact = () => {
     <div className="contact-section">
       <ToastContainer />
       <div className="title-wrapper">
-        <h1 className="section-title">Get in Touch</h1>
+        <motion.h1 
+          className="section-title"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: "some" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
+          Get in Touch
+        </motion.h1>
       </div>
       
       <div className="contact-container">
-        {/* Left Card */}
-        <div className="contact-card">
+        {/* Left Card - Form */}
+        <motion.div 
+          className="contact-card"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: "some" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label>Your Name</label>
@@ -127,12 +142,24 @@ const Contact = () => {
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
-        </div>
+        </motion.div>
 
-        {/* Right Card */}
-        <div className="contact-card">
+        {/* Right Card - Contact Info */}
+        <motion.div 
+          className="contact-card"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: "some" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           <div className="contact-info">
-            <div className="contact-item" onClick={handleEmailClick} style={{ cursor: 'pointer' }}>
+            <motion.div 
+              className="contact-item" 
+              onClick={handleEmailClick} 
+              style={{ cursor: 'pointer' }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <div className="icon-wrapper">
                 <MdEmail className="contact-icon" />
               </div>
@@ -140,9 +167,13 @@ const Contact = () => {
                 <p className="contact-label">Email</p>
                 <p className="contact-value">srivastavaayush6393@gmail.com</p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="contact-item">
+            <motion.div 
+              className="contact-item"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <a 
                 href="https://www.linkedin.com/in/-ayush-srivastava" 
                 target="_blank" 
@@ -157,9 +188,13 @@ const Contact = () => {
                   <p className="contact-value">LinkedIn Profile</p>
                 </div>
               </a>
-            </div>
+            </motion.div>
 
-            <div className="contact-item">
+            <motion.div 
+              className="contact-item"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <a 
                 href="https://github.com/btwitsayush" 
                 target="_blank" 
@@ -174,13 +209,19 @@ const Contact = () => {
                   <p className="contact-value">GitHub Profile</p>
                 </div>
               </a>
-            </div>
+            </motion.div>
 
-            <p className="contact-description">
+            <motion.p 
+              className="contact-description"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: false, amount: "some" }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               Feel free to reach out through any of these channels. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
-            </p>
+            </motion.p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

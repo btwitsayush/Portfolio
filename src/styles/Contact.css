@@ -26,12 +26,12 @@
 }
 
 .section-title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', 'Inter', sans-serif;
   font-size: 2.25rem;
   color: #FFFFFF;
   text-align: center;
   font-weight: 400;
-  margin: 0;  /* Remove default margins */
+  margin-top: 2rem;  /* Remove default margins */
 }
 
 .contact-container {
@@ -63,7 +63,7 @@
   display: block;
   color: #FFFFFF;
   font-size: 0.875rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', 'Inter', sans-serif;
   margin-bottom: 0.5rem;
 }
 
@@ -74,7 +74,7 @@
   border-radius: 0.5rem;
   padding: 0.75rem;
   color: #FFFFFF;  /* Make sure text is white */
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', 'Inter', sans-serif;
   font-size: 0.875rem;
   transition: all 0.3s ease;
 }
@@ -106,7 +106,7 @@ textarea.form-control {
   border: none;
   border-radius: 8px;
   padding: 12px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', 'Inter', sans-serif;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -162,14 +162,14 @@ textarea.form-control {
   color: #808080;
   font-size: 14px;
   margin-bottom: 4px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', 'Inter', sans-serif;
 }
 
 .contact-value {
   color: #FFFFFF;
   font-size: 16px;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', 'Inter', sans-serif;
   word-break: break-word;  /* Allow email to wrap */
 }
 
@@ -189,7 +189,7 @@ textarea.form-control {
   line-height: 1.6;
   margin-top: 2rem;
   padding-top: 1rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', 'Inter', sans-serif;
 }
 
 @media (max-width: 48rem) {  /* 768px - Tablet */
@@ -234,7 +234,7 @@ textarea.form-control {
 
 /* Add these at the bottom of your CSS file */
 .Toastify__toast {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', 'Inter', sans-serif;
   border-radius: 8px;
 }
 

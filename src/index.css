@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Import both fonts once */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* Universal Reset */
 * {
@@ -11,10 +13,10 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font-family: 'Inter', sans-serif;
-  /* background: #c12727; */
+  font-family: 'Poppins', 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 400;
+  background-color: #1C1C20;
 }
 
 #root {
@@ -30,4 +32,7 @@ ul {
 /* Remove link underlines globally */
 a {
   text-decoration: none;
+}
+body{
+  background-color: #000;
 }
