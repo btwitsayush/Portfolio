@@ -1,12 +1,60 @@
-# React + Vite
+# Portfolio Website
+A modern and responsive portfolio website built with React and Vite to showcase my projects and skills.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Demo
+You can view the live portfolio [here](https://portfolio-ayush-srivastavas-projects-cf20f85e.vercel.app/).
 
-Currently, two official plugins are available:
+## Table of Contents
+- Features
+- Installation
+- Usage
+- Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Clean and modern UI design
+- Dark/Light mode toggle
+- Responsive layout for all devices
+- Interactive project showcase
+- Professional journey timeline
+- Skills section with tech stack
+- Contact form for inquiries
+- Smooth animations and transitions
 
-## Expanding the ESLint configuration
+## Installation
+To run this project locally, follow these steps:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clone the repository:
+git clone https://github.com/btwitsayush/Portfolio.git
+
+Navigate to project directory:
+cd Portfolio
+
+Install dependencies:
+npm install
+
+Start development server:
+npm run dev
+
+Build for production:
+npm run build
+
+## Usage
+The portfolio website includes:
+- Home page with introduction
+- About section with background
+- Projects showcase with descriptions
+- Journey timeline showing experience
+- Skills section displaying tech stack
+- Contact form for reaching out
+
+## Tech Stack
+- React.js
+- Vite
+- React Router DOM
+- React Bootstrap
+- React Icons
+- React Toastify
+- CSS3
+- Vercel (Deployment)
+
+Feel free to explore the code and reach out through the contact form on the website!
