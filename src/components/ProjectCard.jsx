@@ -6,6 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import BookStore from '../assets/images/BookStore.png';
 import FlavorsOfAwadh from '../assets/images/Flavour-Of -Awadh.png';
 import PricePrediction from '../assets/images/price-prediction.png';
+import Yolo from '../assets/images/yolov8.png';
+import CloudHome from '../assets/images/CloudHome.jpeg';
 import { 
   skillCardVariants, 
   containerVariants,
@@ -54,7 +56,7 @@ const projects = [
         title: "Cloud Home",
         description: "A cloud storage web app where users can upload, organize, and access their files easily, featuring file management and folder creation functionalities.",
         technologies: ["React.js", "NodeJs", "Express.js","MongoDB","Cloudinary"],
-        image: "/path/to/cloud-home.jpg",
+        image: CloudHome,
         category: "Frontend",
         githubLink: "https://github.com/btwitsayush/Cloud-Home",
         liveDemo: "https://cloudhome-lemon.vercel.app",
@@ -64,7 +66,7 @@ const projects = [
         title: "Rotating Bounding Box Detection",
         description: "An object detection application that uses YOLOv8 and OpenCV to draw rotated bounding boxes around detected objects for better accuracy in non-axis-aligned images.",
         technologies: ["Python", "YOLOv8", "OpenCV", "TensorFlow"],
-        image: "/path/to/rotating-bbox.jpg",
+        image: Yolo,
         category: "Computer Vision",
         githubLink: "https://github.com/btwitsayush/rotating-boundingbox-yolov8-opencv",
         liveDemo: "https://github.com/btwitsayush/rotating-boundingbox-yolov8-opencv",
